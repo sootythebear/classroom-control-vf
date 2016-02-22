@@ -52,8 +52,8 @@ node default {
   }
   
   exec { 'cowsay "Welcome to ${::fqdn}!" > /etc/motd':
-    path      =>  '/usr/local/bin',
-    creates   =>  '/etc/motd',
+    path      =>  "/usr/local/bin",
+    creates   =>  "/etc/motd",
   }
   
   #   class { 'my_class': }
