@@ -42,9 +42,6 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   
-  include users
-  include skeleton
-  
-  #   class { 'my_class': }
+   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
 }
