@@ -42,19 +42,7 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   
-  file { '/etc/motd':
-    noop    => true,
-    ensure  => file,
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0644',
-    content => "Hey, Puppet is fun!\n Learned about r10k!!!",
-  }
-  
-  exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
-    path      =>  "/usr/local/bin",
-    creates   =>  "/etc/motd",
-  }
+  include users
   
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
