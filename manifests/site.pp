@@ -41,11 +41,16 @@ ini_setting { 'random ordering':
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
-  if $::is_virtual  {
-    $hv = capitalize($::virtual)
-    notify { "My HV is: ${hv}\n": }
+ 
+  user { 'admin':
+    ensure => present,
   }
-  
+
+  class { 'aliases':
+    admin   => 'admin',
+    require => User['admin'],
+  }
+
    #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
 }
