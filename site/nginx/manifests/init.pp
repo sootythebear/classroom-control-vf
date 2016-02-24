@@ -1,5 +1,11 @@
 class nginx {
  
+  File {
+    owner  => 'root',
+    group  => 'root',
+    mode   => '0640',
+  }
+  
   package { 'nginx' :
     ensure => present,
     before => [File['block'],File['config']],
