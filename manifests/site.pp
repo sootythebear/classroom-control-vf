@@ -41,8 +41,8 @@ ini_setting { 'random ordering':
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
-  if ${::virtual} != 'physical' {
-    $hv = 'capitalize(${::virtual})'
+  unless $::is_virtual  {
+    $hv = capitalize($::virtual)
     notify { "My HV is: ${hv}\n": }
   }
    #   class { 'my_class': }
