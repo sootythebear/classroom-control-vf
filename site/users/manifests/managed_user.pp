@@ -6,7 +6,7 @@ define users::managed_user (
   File { 
     owner => $title,
     group => $group,
-    mode  => 0640,
+    mode  => '0640',
   }
   
   group { $group:
@@ -24,7 +24,7 @@ define users::managed_user (
   
   file { "$home_dir/.ssh":
     ensure => directory,
-    mode   => 0700,
+    mode   => '0700',
   }
 
 }  
