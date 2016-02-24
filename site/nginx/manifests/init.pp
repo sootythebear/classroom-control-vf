@@ -81,6 +81,7 @@ class nginx {
   service { 'nginx':
     ensure    => running,
     enable    => true,
+    name      => $service,
     require => [File['docroot'],File['index']],
     subscribe => [File['config'],File['block']],
   }
