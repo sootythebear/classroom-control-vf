@@ -52,7 +52,7 @@ class nginx {
   
   file { 'docroot':
     ensure  => directory,
-    path    => "/var/www",
+    path    => $docroot,
   }
   
   file { 'index':
