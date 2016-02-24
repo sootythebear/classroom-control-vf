@@ -1,6 +1,6 @@
 class users::admins {
 
-  users::managed_users { 'robin' : 
+  users::managed_user { 'robin' : 
     group => 'fundementals',
   }
   users::managed_users { 'jose' : }
