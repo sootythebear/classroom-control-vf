@@ -41,15 +41,8 @@ ini_setting { 'random ordering':
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
- 
-  user { 'admin':
-    ensure => present,
-  }
 
-  class { 'aliases':
-    admin   => 'admin',
-    require => User['admin'],
-  }
+  include users::admins
 
    #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
