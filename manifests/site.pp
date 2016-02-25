@@ -44,7 +44,7 @@ node default {
 
   include users::admins
   
-  notify { "notice(hiera('message'))" : }
+  notify { "hiera('message')" : }
 
    #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
