@@ -44,7 +44,7 @@ node default {
 
   include users::admins
   class { nginx :
-    root  => /var/www2,
+    root  => "/var/www2",
   }
   
   
