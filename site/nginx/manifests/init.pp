@@ -10,7 +10,7 @@ class nginx {
       $blockdir = '/etc/nginx/conf.d'
       $logdir   = '/var/log/nginx'
       $service  = 'nginx'
-      $user     = 'ngnix'
+      $user     = 'nginx'
     }
     'Debian' : {
       $package = 'nginx'
