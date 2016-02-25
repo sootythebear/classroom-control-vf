@@ -88,6 +88,5 @@ class nginx (
     subscribe => [File['config'],File['block']],
   }
 
-  }
 }
   
