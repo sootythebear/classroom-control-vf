@@ -2,37 +2,37 @@ class nginx {
   
   case $::osfamily {
     'RedHat' : {
-      $package = 'nginx',
-      $owner   = 'root',
-      $group   = 'root',
-      $docroot = '/var/www',
-      $confdir  = '/etc/nginx',
-      $blockdir = '/etc/nginx/conf.d',
-      $logdir   = '/var/log/nginx',
-      $service  = 'nginx',
-      $user     = 'ngnix',
+      $package = 'nginx'
+      $owner   = 'root'
+      $group   = 'root'
+      $docroot = '/var/www'
+      $confdir  = '/etc/nginx'
+      $blockdir = '/etc/nginx/conf.d'
+      $logdir   = '/var/log/nginx'
+      $service  = 'nginx'
+      $user     = 'ngnix'
     }
     'Debian' : {
-      $package = 'nginx',
-      $owner   = 'root',
-      $group   = 'root',
-      $docroot = '/var/www',
-      $confdir  = '/etc/nginx',
-      $blockdir = '/etc/nginx/conf.d',
-      $logdir   = '/var/log/nginx',
-      $service  = 'nginx',
-      $user     = 'www-data',
+      $package = 'nginx'
+      $owner   = 'root'
+      $group   = 'root'
+      $docroot = '/var/www'
+      $confdir  = '/etc/nginx'
+      $blockdir = '/etc/nginx/conf.d'
+      $logdir   = '/var/log/nginx'
+      $service  = 'nginx'
+      $user     = 'www-data'
     }
     'windows' : {
-      $package = 'nginx-service',
-      $owner   = 'Administrator',
-      $group   = 'Administrators',
-      $docroot = 'c:/programdata/nginx/html',
-      $confdir  = 'c:/programdata/nginx',
-      $blockdir = 'c:/programdata/nginx/conf.d',
-      $logdir   = 'c:/programdata/nginx/logs',
-      $service  = 'nginx',
-      $user     = 'nobody',
+      $package = 'nginx-service'
+      $owner   = 'Administrator'
+      $group   = 'Administrators'
+      $docroot = 'c:/programdata/nginx/html'
+      $confdir  = 'c:/programdata/nginx'
+      $blockdir = 'c:/programdata/nginx/conf.d'
+      $logdir   = 'c:/programdata/nginx/logs'
+      $service  = 'nginx'
+      $user     = 'nobody'
     }
     default : {
       fail { "Not a supprted Operating System!!" : }
