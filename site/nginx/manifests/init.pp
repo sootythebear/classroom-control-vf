@@ -7,7 +7,7 @@ class nginx (
       $package = 'nginx'
       $owner   = 'root'
       $group   = 'root'
-      $docroot = "${root}",
+      $docroot = "${root}"
       $confdir  = '/etc/nginx'
       $blockdir = '/etc/nginx/conf.d'
       $logdir   = '/var/log/nginx'
@@ -18,7 +18,7 @@ class nginx (
       $package = 'nginx'
       $owner   = 'root'
       $group   = 'root'
-      $docroot = "${root}",
+      $docroot = "${root}"
       $confdir  = '/etc/nginx'
       $blockdir = '/etc/nginx/conf.d'
       $logdir   = '/var/log/nginx'
@@ -29,7 +29,7 @@ class nginx (
       $package = 'nginx-service'
       $owner   = 'Administrator'
       $group   = 'Administrators'
-      $docroot = "${root}",
+      $docroot = "${root}"
       $confdir  = 'c:/programdata/nginx'
       $blockdir = 'c:/programdata/nginx/conf.d'
       $logdir   = 'c:/programdata/nginx/logs'
