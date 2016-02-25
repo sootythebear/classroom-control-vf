@@ -35,7 +35,7 @@ class nginx {
       $user     = 'nobody',
     }
     default : {
-      fail { "Not a supprted Operating System!! : }
+      fail { "Not a supprted Operating System!!" : }
     }
  }
  
