@@ -43,6 +43,7 @@ node default {
   # Example:
 
   include users::admins
+  include nginx
   
   notify { "${hiera('message')}" : }
 
