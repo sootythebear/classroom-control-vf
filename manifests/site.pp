@@ -43,6 +43,8 @@ node default {
   # Example:
 
   include users::admins
+  
+  notify { "notice(hiera('message'))" : }
 
    #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
