@@ -43,7 +43,10 @@ node default {
   # Example:
 
   include users::admins
-  include nginx
+  class { nginx :
+    root  => /var/www2,
+  }
+  
   
   notify { "${hiera('message')}" : }
 
